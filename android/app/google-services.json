@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "889234148695",
+    "project_id": "lockscreenapp-281d1",
+    "storage_bucket": "lockscreenapp-281d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:889234148695:android:6a81c294ce6d6f8e774212",
+        "android_client_info": {
+          "package_name": "com.example.launcher_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHc5hrPRAe9CNgg-nfB7a0ElM4pCHGdyo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
