@@ -1,4 +1,4 @@
-import 'dart:async'; // Import for Timer
+import 'dart:async';
 import 'package:device_apps/device_apps.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -26,9 +26,8 @@ import 'screens/edit_normal_password_screen.dart';
 import 'screens/edit_special_password_screen.dart';
 import 'screens/check_password_screen.dart';
 import 'screens/manage_apps_screen.dart';
-
-import 'package:launcher_app/screens/splash_screen.dart'; 
-import 'package:local_auth/local_auth.dart'; // Import for biometric authentication
+import 'package:launcher_app/screens/splash_screen.dart';
+import 'package:local_auth/local_auth.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,9 +35,9 @@ void main() async {
     options: const FirebaseOptions(
         apiKey: "AIzaSyBHc5hrPRAe9CNgg-nfB7a0ElM4pCHGdyo",
         appId: "1:889234148695:android:6a81c294ce6d6f8e774212Rr",
-        storageBucket:"lockscreenapp-281d1.appspot.com" ,
+        storageBucket: "lockscreenapp-281d1.appspot.com",
         projectId: "lockscreenapp-281d1",
-        messagingSenderId: '889234148695')
+        messagingSenderId: '889234148695'),
   );
 
   // Initialize Hive
@@ -54,11 +53,11 @@ void main() async {
   final syncService = SyncService(firebaseService, cacheService);
   final navigationService = NavigationService();
 
- // Fetch and cache installed apps
+  // Fetch and cache installed apps
   List<Application> allApps = await DeviceApps.getInstalledApplications(
     includeAppIcons: true,
     includeSystemApps: true,
-    onlyAppsWithLaunchIntent:true
+    onlyAppsWithLaunchIntent: true,
   );
 
   // Filter out the launcher app
@@ -110,7 +109,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    _authenticate();  // Start biometric authentication on app load
+    _authenticate(); // Start biometric authentication on app load
   }
 
   // Function to authenticate the user
